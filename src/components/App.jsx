@@ -9,7 +9,7 @@ export const App = () => {
     good: 0,
     neutral: 0,
     bad: 0,
-    total:0,
+    total: 0,
     positive: 0,
   });
   return (
@@ -21,15 +21,28 @@ export const App = () => {
         bad={count.bad}
         setCount={setCount}
       />
-        <Feedback
-        good={count.good}
-        neutral={count.neutral}
-        bad={count.bad}
-        total={count.total}
-        positive={count.positive}
-        setCount={setCount}
+      <Feedback
+          good={count.good}
+          neutral={count.neutral}
+          bad={count.bad}
+          total={count.total}
+          positive={count.positive}
+          setCount={setCount}
         />
-        <Notification/>
+      <Notification />
+      
+      {/* {count.total ? (
+        <Feedback
+          good={count.good}
+          neutral={count.neutral}
+          bad={count.bad}
+          total={count.total}
+          positive={count.positive}
+          setCount={setCount}
+        />
+      ) : (
+        <Notification />
+      )} */}
     </>
   );
 };
