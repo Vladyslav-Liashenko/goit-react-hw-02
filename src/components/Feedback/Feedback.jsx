@@ -7,7 +7,7 @@ export const Feedback = props => {
     positive = 0;
   }
   return (
-    <div>
+      <div>
       <p>Good: {props.good}</p>
       <p>Neutral: {props.neutral}</p>
       <p>Bad: {props.bad}</p>

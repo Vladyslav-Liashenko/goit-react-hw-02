@@ -5,6 +5,7 @@ import { Feedback } from './Feedback/Feedback';
 import { Notification } from './Notification/Notification';
 
 export const App = () => {
+  
   const [count, setCount] = useState({
     good: 0,
     neutral: 0,
@@ -12,6 +13,7 @@ export const App = () => {
     total: 0,
     positive: 0,
   });
+
   return (
     <>
       <Description />
@@ -21,28 +23,14 @@ export const App = () => {
         bad={count.bad}
         setCount={setCount}
       />
-      <Feedback
+      {count.total !==0 ? (<Feedback
           good={count.good}
           neutral={count.neutral}
           bad={count.bad}
           total={count.total}
           positive={count.positive}
           setCount={setCount}
-        />
-      <Notification />
-      
-      {/* {count.total ? (
-        <Feedback
-          good={count.good}
-          neutral={count.neutral}
-          bad={count.bad}
-          total={count.total}
-          positive={count.positive}
-          setCount={setCount}
-        />
-      ) : (
-        <Notification />
-      )} */}
+        />) : (<Notification />)}
     </>
   );
 };
