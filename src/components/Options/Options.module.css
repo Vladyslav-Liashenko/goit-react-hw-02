@@ -1,7 +1,6 @@
 .divbtn{
     display: flex;
     justify-content: center;
-    background-color: rgb(197, 236, 223);
 }
 .btn {
     font-size: 30px;

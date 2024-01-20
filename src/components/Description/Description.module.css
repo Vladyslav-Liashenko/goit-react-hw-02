@@ -1,7 +1,6 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: rgb(197, 236, 223);
 }
 .h1 {
   display: flex;
