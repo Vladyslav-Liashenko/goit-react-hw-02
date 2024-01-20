@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(197, 236, 223);
+}
+.h1 {
+  display: flex;
+  justify-content: center;
+  color: rgb(72, 147, 122);
+  font-weight: 900;
+}
+.p {
+  display: flex;
+  justify-content: center;
+  color: rgb(27, 61, 21);
+  font-weight: 700;
+}

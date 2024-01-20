@@ -1,3 +1,5 @@
+import styles from './Feedback.module.css';
+
 export const Feedback = props => {
   let total = props.good + props.neutral + props.bad;
   let positive;
@@ -7,12 +9,12 @@ export const Feedback = props => {
     positive = 0;
   }
   return (
-      <div>
-      <p>Good: {props.good}</p>
-      <p>Neutral: {props.neutral}</p>
-      <p>Bad: {props.bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive: {positive} %</p>
+      <div className={styles.divfeedback}>
+      <p className={styles.p}>Good: {props.good}</p>
+      <p className={styles.p}>Neutral: {props.neutral}</p>
+      <p className={styles.p}>Bad: {props.bad}</p>
+      <p className={styles.p}>Total: {total}</p>
+      <p className={styles.p}>Positive: {positive} %</p>
     </div>
   );
 };

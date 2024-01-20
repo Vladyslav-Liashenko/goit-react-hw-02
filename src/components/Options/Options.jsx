@@ -1,3 +1,4 @@
+import styles from './Options.module.css';
 export const Options = props => {
   const handleClickGood = () => {
     props.setCount({
@@ -32,11 +33,11 @@ export const Options = props => {
   };
 
   return (
-    <div>
-      <button onClick={handleClickGood}>Good</button>
-      <button onClick={handleClickNeutral}>Neutral</button>
-      <button onClick={handleClickBad}>Bad</button>
-      <button onClick={handleClickReset}>Reset</button>
+    <div className={styles.divbtn}>
+      <button className={styles.btn} onClick={handleClickGood}>Good 😁</button>
+      <button className={styles.btn} onClick={handleClickNeutral}>Neutral 🤔</button>
+      <button className={styles.btn} onClick={handleClickBad}>Bad 😒</button>
+      <button className={styles.btn} onClick={handleClickReset}>Reset 🗑</button>
     </div>
   );
 };

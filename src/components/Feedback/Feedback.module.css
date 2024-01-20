@@ -1,0 +1,10 @@
+.divfeedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(197, 236, 223);
+}
+.p {
+    color: rgb(27, 61, 21);
+    font-weight: 700;
+}

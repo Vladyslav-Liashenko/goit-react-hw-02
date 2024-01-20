@@ -1,0 +1,21 @@
+.divbtn{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(197, 236, 223);
+}
+.btn {
+    font-size: 30px;
+    border-radius: 20%;
+    padding: 10px 20px;
+    margin: 30px 15px;
+    color: rgb(27, 61, 21);
+    background-color: rgb(181, 218, 206);
+    border-color: rgb(27, 61, 21);
+    transition: 1s;
+}
+.btn:hover,
+.btn:focus {
+    background-color: rgb(127, 176, 161);
+    cursor: pointer;
+    transition:1s;
+}
