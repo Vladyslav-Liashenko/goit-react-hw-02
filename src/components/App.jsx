@@ -14,8 +14,6 @@ export const App = () => {
       good: 0,
       neutral: 0,
       bad: 0,
-      total: 0,
-      positive: 0,
     };
   });
 
@@ -23,23 +21,45 @@ export const App = () => {
     window.localStorage.setItem('count', JSON.stringify(count));
   }, [count]);
 
+  let total = count.good + count.neutral + count.bad;
+  let positive;
+
+  if (count.good !== 0) {
+    positive = Math.round(((count.good + count.neutral) / total) * 100);
+  } else {
+    positive = 0;
+  }
+
+  const heandleLeaveFeedback = option => {
+    setCount({
+      ...count,
+      [option]: count[option] + 1,
+    });
+  };
+
+  const handleClickReset = () => {
+    setCount({
+      ...count,
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    });
+  };
+
   return (
     <>
       <Description />
       <Options
-        good={count.good}
-        neutral={count.neutral}
-        bad={count.bad}
-        setCount={setCount}
+        heandleLeaveFeedback={heandleLeaveFeedback}
+        handleClickReset={handleClickReset}
       />
-      {count.total !== 0 ? (
+      {total !== 0 ? (
         <Feedback
           good={count.good}
           neutral={count.neutral}
           bad={count.bad}
-          total={count.total}
-          positive={count.positive}
-          setCount={setCount}
+          total={total}
+          positive={positive}
         />
       ) : (
         <Notification />
